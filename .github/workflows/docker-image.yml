@@ -1,6 +1,7 @@
 name: Build and Push Docker Image to Docker Hub
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -8,7 +9,6 @@ on:
     branches:
       - main
     if: github.repository == 'huangxd-/danmu_api'
-
 jobs:
   build:
     runs-on: ubuntu-latest
